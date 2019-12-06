@@ -20,7 +20,7 @@ void		ft_timeperm(struct stat d_stat, t_flags flag)
 
 	size = sizeof(date_time);
 	ft_bzero(date_time, size);
-	if (flags.u == 1)
+	if (flag.u == 1)
 		ft_strncpy(date_time, ctime(&d_stat.st_atime), size);
 	else
 		ft_strncpy(date_time, ctime(&d_stat.st_mtime), size);

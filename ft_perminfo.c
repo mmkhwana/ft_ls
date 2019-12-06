@@ -17,7 +17,7 @@ void		ft_perminfo(struct stat d_stat, t_flags flags)
 	struct passwd		*d_pas;
 	struct group		*d_grp;
 
-	ft_putnbr((int)st.st_nlink);
+	ft_putnbr((int)d_stat.st_nlink);
 	ft_putchar(' ');
 	if (flags.g == 0)
 	{
@@ -26,7 +26,7 @@ void		ft_perminfo(struct stat d_stat, t_flags flags)
 		ft_putchar(' ');
 	}
 	d_grp = getgrgid(d_stat.st_gid);
-	ft_putstr(p->gr_name);
+	ft_putstr(d_grp->gr_name);
 	ft_putchar(' ');
 	ft_putnbr((long long)d_stat.st_size);
 	ft_putchar(' ');

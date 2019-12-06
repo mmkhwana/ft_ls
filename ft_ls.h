@@ -36,6 +36,9 @@ typedef	struct	s_flags
 
 void		ft_permissions(struct stat d_stat);
 void		ft_perminfo(struct stat	d_stat);
-void		ft_timeperm(struct  stat d_stat, f_flags flags);
+void        ft_diffperm(struct stat d_stat);
+void        ft_printperm(struct stat d_stat);
+void        ft_memeberperm(struct stat d_stat);
+void		ft_timeperm(struct  stat d_stat, t_flags flags);
 
 #endif
