@@ -35,7 +35,7 @@ typedef	struct	s_flags
 }			t_flags;
 
 void		ft_permissions(struct stat d_stat);
-void		ft_perminfo(struct stat	d_stat);
+void		ft_perminfo(struct stat d_stat, t_flags flags);
 void        ft_diffperm(struct stat d_stat);
 void        ft_printperm(struct stat d_stat);
 void        ft_memeberperm(struct stat d_stat);
