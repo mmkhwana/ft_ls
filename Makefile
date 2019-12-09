@@ -14,9 +14,11 @@ NAME = ft_ls.a
 
 CC = gcc
 
-SOURCE = ft_permissions.c ft_perminfo.c ft_timeperm.c
+SOURCE = ft_permission.c ft_perminfo.c ft_timeperm.c ft_printperm.c ft_memberperm.c
+		  ft_diffperm.c ft_display.c
 
-OBJECTS = ft_permissions.o ft_perminfo.c ft_timeperm.o
+OBJECTS = ft_permission.o ft_perminfo.c ft_timeperm.o ft_printperm.o ft_memberperm.o
+		  ft_diffperm.o ft_display.o
 
 FLAGS = -Wall -Werror -Wextra
 
