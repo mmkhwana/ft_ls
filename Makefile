@@ -15,11 +15,13 @@ NAME = ft_ls.a
 CC = gcc
 
 SOURCE = ft_permission.c ft_perminfo.c ft_timeperm.c ft_printperm.c ft_memberperm.c
-		  ft_diffperm.c ft_display.c
+		  ft_diffperm.c ft_display.c ft_path.c ft_sort_time.c ft_sort_time_b.c ft_newlist.c
+		  ft_fill_list.c  ft_list.c	  
 
 OBJECTS = ft_permission.o ft_perminfo.c ft_timeperm.o ft_printperm.o ft_memberperm.o
-		  ft_diffperm.o ft_display.o
-
+		  ft_diffperm.o ft_display.o ft_path.o ft_sort_time.o ft_sort_time_b.c ft_newlist.o
+		  ft_fill_list.o  ft_list.o
+ 
 FLAGS = -Wall -Werror -Wextra
 
 all : $(NAME)

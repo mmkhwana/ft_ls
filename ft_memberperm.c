@@ -1,7 +1,7 @@
 
 #include "ft_ls.h"
 
-void        ft_memeberperm(struct stat d_stat)
+void        ft_memberperm(struct stat d_stat)
 {
     if (d_stat.st_mode & S_IRGRP)
 		ft_putchar('r');

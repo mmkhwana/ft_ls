@@ -58,8 +58,14 @@ void		ft_permissions(struct stat d_stat);
 void		ft_perminfo(struct stat d_stat, t_flags flags);
 void        ft_diffperm(struct stat d_stat);
 void        ft_printperm(struct stat d_stat);
-void        ft_memeberperm(struct stat d_stat);
+void        ft_memberperm(struct stat d_stat);
 void		ft_timeperm(struct  stat d_stat, t_flags flags);
 void        ft_display(t_files *tmp, t_flags flag);
+char        *ft_makepath(char *dir, char *file);
+void        ft_sort_time_insert(t_files *current, t_files *new_node);
+void        ft_sort_time_insert_b(t_files **head, t_files *new_node);
+t_files     *ft_newlist(struct  dirent *dptr, char *path, t_flags flags);
+void        ft_fill_list(struct stat opt, t_files *list);
+void        ft_list(t_files **b, struct dirent *dir, char path, t_flags flags);
 
 #endif

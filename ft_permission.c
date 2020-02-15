@@ -12,7 +12,7 @@
 
 #include "ft_ls.h"
 
-void		ft_dirperm(struct stat d_stat)
+void		ft_permission(struct stat d_stat)
 {
 	if (S_ISDIR(d_stat.st_mode))
 		ft_putchar('d');
