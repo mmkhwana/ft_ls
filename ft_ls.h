@@ -32,7 +32,16 @@ typedef	struct	s_flags
 	int		g;
 	int		u;
 	int		f;
+	int		sm_r;
+	int		lg_r;
 }			t_flags;
+
+typedef struct 		s_dir
+{
+	DIR 			*dire;
+	t_files			*files;
+	struct dirent	*diropt;
+}					t_dir;
 
 typedef struct		s_files
 {
@@ -53,6 +62,13 @@ typedef struct		s_files
 	ino_t			st_ino;
 	blkcnt_t		st_blocks;
 }					t_files;
+
+typedef struct		s_lists
+{
+	t_files			*files;
+	t_files			*temp;
+	t_files			*tempSec;
+}					t_lists;
 
 void		ft_permissions(struct stat d_stat);
 void		ft_perminfo(struct stat d_stat, t_flags flags);
