@@ -4,8 +4,10 @@ char        *ft_makepath(char *dir, char *file)
 {
     char        *new_path;
     size_t      i;
+    size_t      j;
 
-    i = ft_strlen(dir) + ft_strlen(file);
+    j = ft_strlen(file);
+    i = ft_strlen(dir) + j;
     i = i + 1;
 
     new_path =  NULL;
