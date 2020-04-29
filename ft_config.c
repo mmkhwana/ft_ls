@@ -71,8 +71,34 @@ t_lists    ft_arange_fist(char *dir, t_flags flags)
     {
         make.tempSec = make.files;
     }
-    return (make);
-    
-    
-    
+    return (make);      
+}
+
+t_files         *ft_arrange(char *dir, t_flags flags)
+{
+    t_lists     list;
+    t_files     *temp;
+
+    if (flags.l == 1)
+    {
+        ft_section(dir, flags);
+    }
+    list = ft_arange_fist(dir, flags);
+    if (!list.files)
+    {
+        return (NULL);
+    }
+    temp = list.temp;
+    while (list.temp->next)
+    {
+        ft_display(list.temp, flags);
+        list.temp = list.temp->next;
+    }
+
+    ft_display(list.temp, flags);
+    if (flags.lg_r == 1)
+    {
+        ft_arange_sec(list.temp, dir, flags);
+    }
+    return(list.files);
 }

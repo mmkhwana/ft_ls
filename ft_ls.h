@@ -88,4 +88,12 @@ t_files     *ft_newlist(struct dirent *dir, char * path, t_flags flags);
 void         ft_directory(t_files *temp, char *dir, t_flags flags);
 void        *ft_check(char *name);
 void        ft_linkpath(t_files *file, char *path, t_flags flags);
+t_files     *ft_arrange(char *dir, t_flags flags);
+t_lists    	ft_arange_fist(char *dir, t_flags flags);
+void        ft_arange_sec(t_files *files, char *dir, t_flags flags);
+void        ft_orderedinsert(t_files **head, t_files *newnode);
+void        ft_insertionorder(t_files **heah, t_flags flags);
+void        *ft_sectionsetup(char *dir, t_flags flags, t_dir *var);
+void        ft_displaysection(int section, t_flags flags);
+void        ft_section(char *dir, t_flags flags);
 #endif
