@@ -96,4 +96,7 @@ void        ft_insertionorder(t_files **heah, t_flags flags);
 void        *ft_sectionsetup(char *dir, t_flags flags, t_dir *var);
 void        ft_displaysection(int section, t_flags flags);
 void        ft_section(char *dir, t_flags flags);
+void        ft_timesorted(t_files * curr, t_files *newnode);
+void        ft_timeaccessed(t_files **head, t_files *newnode);
+
 #endif
