@@ -70,6 +70,26 @@ typedef struct		s_lists
 	t_files			*tempSec;
 }					t_lists;
 
+typedef struct		s_begin
+{
+	int				begin;
+	int				selected;
+}					t_begin;
+
+typedef struct		s_option
+{
+	struct stat		fstat;
+	t_files			*alist;
+	char			*newpath;
+}					t_option;
+
+typedef struct		s_main
+{
+	t_flags			flags;
+	int				start;
+	char			*pwd;
+}					t_main;
+
 void		ft_permissions(struct stat d_stat);
 void		ft_perminfo(struct stat d_stat, t_flags flags);
 void        ft_diffperm(struct stat d_stat);
@@ -98,5 +118,15 @@ void        ft_displaysection(int section, t_flags flags);
 void        ft_section(char *dir, t_flags flags);
 void        ft_timesorted(t_files * curr, t_files *newnode);
 void        ft_timeaccessed(t_files **head, t_files *newnode);
+void        ft_defineflags(t_flags *flag);
+void        ft_flagfault(char x, char *str, int i);
+void        ft_flagparam(char *flags, t_flags *flg,int i)
+void        ft_flagtype(char *flags, t_flags flg);
+t_begin     ft_flag(char **av, t_flags *flags);
+void    	ft_freelist(t_files *files);
+void        ft_freelistprv(t_files *files);
+void        ft_free(t_files *files);
+t_files     *ft_node(t_files *head, t_files *a);
+void        ft_getswap(t_files **head, t_files **a, t_files **b);
 
 #endif

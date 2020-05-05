@@ -16,9 +16,11 @@ CC = gcc
 
 SOURCE =	ft_printperm.c ft_display.c ft_path.c ft_sort_time_inserted.c ft_list.c
 			ft_verify.c ft_config.c ft_inorder.c ft_section.c ft_time.c
+			ft_free.c ft_flags.c
 
 OBJECTS =	ft_printperm.o ft_display.o ft_path.o ft_sort_time_inserted.o ft_list.o
 			ft_verify.o ft_config.o ft_inorder.o ft_section.o ft_time.o
+			ft_free.o ft_flags.o
  
 FLAGS = -Wall -Werror -Wextra
 
