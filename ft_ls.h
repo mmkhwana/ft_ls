@@ -128,5 +128,10 @@ void        ft_freelistprv(t_files *files);
 void        ft_free(t_files *files);
 t_files     *ft_node(t_files *head, t_files *a);
 void        ft_getswap(t_files **head, t_files **a, t_files **b);
+t_files 	*ft_listOptions(char *path, char *name, t_flags flags);
+void        ft_optionsA(t_files *temp, char *pwd, t_flags flags);
+void        ft_optionB(t_files *temp, char *pwd, t_files flags);
+t_files     *ft_optionsSetup(char **av, t_files *file, t_main main);
+void        ft_option(char **av, t_main main);
 
 #endif
