@@ -16,7 +16,7 @@ void        *ft_sectionsetup(char *dir, t_flags flags, t_dir *var)
         ft_putendl("listnew problem");
         exit(1);
     }
-    while (var->diropt = readdir(var->dire))
+    while ((var->diropt = readdir(var->dire)))
     {
         ft_list(&var->files, var->diropt, dir, flags);
     }

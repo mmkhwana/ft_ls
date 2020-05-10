@@ -9,7 +9,7 @@ void    ft_freelist(t_files *files)
     {
         files = files->next;
         free(current->name);
-        if (S_ISLINK((current)->st_mode))
+        if (S_ISLNK((current)->st_mode))
         {
             free(current->link);
         }

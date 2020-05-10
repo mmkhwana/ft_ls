@@ -13,7 +13,7 @@ void        ft_insertionorder(t_files **heah, t_flags flags)
         next = curr->next;
         if (flags.t == 1 && flags.u == 1)
         {
-            ft_timeaccess(&inorder, curr);
+            ft_timeaccessed(&inorder, curr);
         }
         else if (flags.t == 1)
         {
@@ -23,7 +23,7 @@ void        ft_insertionorder(t_files **heah, t_flags flags)
         {
             ft_orderedinsert(&inorder, curr);   
         }
-        curr = next
+        curr = next;
     }
     *heah = inorder;
 }

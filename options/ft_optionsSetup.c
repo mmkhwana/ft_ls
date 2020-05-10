@@ -21,5 +21,5 @@ t_files         *ft_optionsSetup(char **av, t_files *file, t_main main)
         }
         main.start++;
     }
-    return (temp);
+    return (tmp);
 }

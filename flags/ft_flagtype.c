@@ -1,6 +1,6 @@
 #include "../ft_ls.h"
 
-void            ft_flagtype(char *flags, t_flags flg)
+void            ft_flagtype(char *flags, t_flags *flg)
 {
     int         i;
 

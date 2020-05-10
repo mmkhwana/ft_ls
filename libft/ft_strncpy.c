@@ -18,8 +18,8 @@ char	*ft_strncpy(char *strd, const char *strs, size_t n)
 	size_t		i;
 
 	i = 0;
-	if (strd == '\0' && strs == '\0')
-		return (NULL);
+	// if (strd == '\0' && strs == '\0')
+	// 	return (NULL);
 	s2 = strd;
 	while (strs[i] != '\0' && n > 0)
 	{

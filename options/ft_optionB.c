@@ -1,6 +1,6 @@
 #include "../ft_ls.h"
 
-void            ft_optionB(t_files *temp, char *pwd, t_files flags)
+void            ft_optionB(t_files *temp, char *pwd, t_flags flags)
 {
     t_files     *file;
     char        *newpath;
@@ -20,7 +20,7 @@ void            ft_optionB(t_files *temp, char *pwd, t_files flags)
         {
             ft_putchar('\n');
             ft_putendl(newpath);
-            file = ft_arrange(newpath, flags);
+            file = ft_arange(newpath, flags);
             ft_free(file);
         }
     }

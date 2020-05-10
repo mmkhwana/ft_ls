@@ -19,13 +19,13 @@ void            ft_directory(t_files *temp, char *dir, t_flags flags)
                     (temp)->sub_dir = ft_arange(newpath, flags);
                 }
             }
+            else
+            {
+                ft_putchar('\n');
+                ft_putendl(newpath);
+                (temp)->sub_dir = ft_arange(newpath, flags);
+            }
+            free(newpath);
         }
-        else
-        {
-            ft_putchar('\n');
-            ft_putendl(newpath);
-            (temp)->sub_dir = ft_arange(newpath, flags);
-        }
-        free(newpath);
     }
 }

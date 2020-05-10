@@ -6,9 +6,9 @@ t_files         *ft_reverse(t_files *head)
     t_files     *previous;
     t_files     *next;
 
-    curr = head;
+    current = head;
     previous = NULL;
-    while (curr)
+    while (current)
     {
         next = current->next;
         current->next = previous;

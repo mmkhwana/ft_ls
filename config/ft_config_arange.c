@@ -22,7 +22,7 @@ t_files         *ft_config_arange(char *dir, t_flags flags)
         ft_putendl_fd("listnew problem", 1);
         exit(1);
     }
-    while (opt.diropt = readdir(opt.dire))
+    while ((opt.diropt = readdir(opt.dire)))
         ft_list(&opt.files, opt.diropt, dir, flags);
     closedir(opt.dire);
     return (opt.files);

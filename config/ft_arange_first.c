@@ -9,7 +9,7 @@ t_lists    ft_arange_fist(char *dir, t_flags flags)
     make.temp = make.files;
     if (flags.f == 0)
     {
-        ft_insertionOrder(&make.temp, flags);
+        ft_insertionorder(&make.temp, flags);
     }
     if (flags.f == 1)
     {
@@ -24,7 +24,7 @@ t_lists    ft_arange_fist(char *dir, t_flags flags)
     else if (flags.t)
     {
             make.tempSec = make.temp;
-            make.files = make.temp
+            make.files = make.temp;
     }
     else
     {

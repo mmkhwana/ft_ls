@@ -16,7 +16,9 @@ t_files         *ft_newlist(struct dirent *dir, char * path, t_flags flags)
     ft_filllist(dstat, list);
     list->dir = dir;
     list->name = ft_strdup(dir->d_name);
-    if(S_ISLINK((list)->st_mode))
+    if(S_ISLNK((list)->st_mode))
+    {
         ft_linkpath(list, newpath, flags);
-        return(list);
+    }
+    return(list);
 }

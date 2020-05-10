@@ -17,8 +17,8 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <pwd.h>
+#include <errno.h>
 #include <grp.h>
-#include <uuid/uuid.h>
 #include <time.h>
 #include "libft/libft.h"
 
@@ -89,7 +89,7 @@ typedef struct		s_main
 	char			*pwd;
 }					t_main;
 
-void		ft_permissions(struct stat d_stat);
+void		ft_permission(struct stat d_stat);
 void		ft_perminfo(struct stat d_stat, t_flags flags);
 void        ft_diffperm(struct stat d_stat);
 void        ft_printperm(struct stat d_stat);
@@ -98,18 +98,20 @@ void		ft_timeperm(struct  stat d_stat, t_flags flags);
 void        ft_display(t_files *tmp, t_flags flag);
 char        *ft_makepath(char *dir, char *file);
 void        ft_sort_time_insert(t_files *current, t_files *new_node);
-void        ft_sort_time_insert_b(t_files **head, t_files *new_node);
+void        ft_sort_time_inserted(t_files **head, t_files *new_node);
 t_files     *ft_newlist(struct  dirent *dptr, char *path, t_flags flags);
 void        ft_fill_list(struct stat opt, t_files *list);
-void        ft_list(t_files **b, struct dirent *dir, char path, t_flags flags);
+void        ft_list(t_files **b, struct dirent *dir, char *path, t_flags flags);
 void        ft_filllist(struct stat opt, t_files *list);
 t_files     *ft_newlist(struct dirent *dir, char * path, t_flags flags);
-void         ft_directory(t_files *temp, char *dir, t_flags flags);
+t_files     *ft_reverse(t_files *head);
+void        ft_directory(t_files *temp, char *dir, t_flags flags);
 void        *ft_check(char *name);
 void        ft_linkpath(t_files *file, char *path, t_flags flags);
-t_files     *ft_arrange(char *dir, t_flags flags);
+t_files     *ft_arange(char *dir, t_flags flags);
 t_lists    	ft_arange_fist(char *dir, t_flags flags);
 void        ft_arange_sec(t_files *files, char *dir, t_flags flags);
+t_files     *ft_config_arange(char *dir, t_flags flags);
 void        ft_orderedinsert(t_files **head, t_files *newnode);
 void        ft_insertionorder(t_files **heah, t_flags flags);
 void        *ft_sectionsetup(char *dir, t_flags flags, t_dir *var);
@@ -119,8 +121,8 @@ void        ft_timesorted(t_files * curr, t_files *newnode);
 void        ft_timeaccessed(t_files **head, t_files *newnode);
 void        ft_defineflags(t_flags *flag);
 void        ft_flagfault(char x, char *str, int i);
-void        ft_flagparam(char *flags, t_flags *flg,int i)
-void        ft_flagtype(char *flags, t_flags flg);
+void        ft_flagparam(char *flags, t_flags *flg,int i);
+void        ft_flagtype(char *flags, t_flags *flg);
 t_begin     ft_flag(char **av, t_flags *flags);
 void    	ft_freelist(t_files *files);
 void        ft_freelistprv(t_files *files);
@@ -129,7 +131,7 @@ t_files     *ft_node(t_files *head, t_files *a);
 void        ft_getswap(t_files **head, t_files **a, t_files **b);
 t_files 	*ft_listOptions(char *path, char *name, t_flags flags);
 void        ft_optionsA(t_files *temp, char *pwd, t_flags flags);
-void        ft_optionB(t_files *temp, char *pwd, t_files flags);
+void        ft_optionB(t_files *temp, char *pwd, t_flags flags);
 t_files     *ft_optionsSetup(char **av, t_files *file, t_main main);
 void        ft_option(char **av, t_main main);
 

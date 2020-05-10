@@ -19,7 +19,7 @@ void        ft_timeaccessed(t_files **head, t_files *newnode)
         }
         if (current->next != NULL && current->next->atime - newnode->atime == 0)
         {
-            ft_timeaccessed(current, newnode);
+            ft_timeaccessed(&current, newnode);
         }
         else
         {

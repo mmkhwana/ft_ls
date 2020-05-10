@@ -1,6 +1,6 @@
 #include "../ft_ls.h"
 
-t_files         *ft_arrange(char *dir, t_flags flags)
+t_files         *ft_arange(char *dir, t_flags flags)
 {
     t_lists     list;
     t_files     *temp;
@@ -15,16 +15,16 @@ t_files         *ft_arrange(char *dir, t_flags flags)
         return (NULL);
     }
     temp = list.temp;
-    while (list.temp->next)
+    while (temp->next)
     {
-        ft_display(list.temp, flags);
-        list.temp = list.temp->next;
+        ft_display(temp, flags);
+        temp = temp->next;
     }
 
-    ft_display(list.temp, flags);
+    ft_display(temp, flags);
     if (flags.RR == 1)
     {
-        ft_arange_sec(list.temp, dir, flags);
+        ft_arange_sec(temp, dir, flags);
     }
     return(list.files);
 }

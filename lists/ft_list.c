@@ -1,6 +1,6 @@
 #include "../ft_ls.h"
 
-void        ft_list(t_files **b, struct dirent *dir, char path, t_flags flags)
+void        ft_list(t_files **b, struct dirent *dir, char *path, t_flags flags)
 {
     t_files     *list;
 

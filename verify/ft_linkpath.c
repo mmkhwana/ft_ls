@@ -4,13 +4,11 @@ void        ft_linkpath(t_files *file, char *path, t_flags flags)
 {
     size_t      i;
     ssize_t     link_size;
-    ssize_t     size;
     char        *link;
     char        buff[1024];
     char        *msg;
 
     link_size = 0;
-    size = 0;
     link_size = readlink(path, buff, sizeof(buff));
     buff[link_size] = '\0';
     if(flags.l == 1)

@@ -14,7 +14,7 @@ t_begin         ft_flag(char **av, t_flags *flags)
     {
         if (av[x][0] == '-' && flg == 1)
         {
-            ft_flagtype(av[i], flg);
+            ft_flagtype(av[x], flags);
         }
         else if (av[x][0] != '-' && flg == 1)
         {

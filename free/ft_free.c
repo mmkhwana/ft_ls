@@ -19,7 +19,7 @@ void        ft_free(t_files *files)
         }
         files = files->next;
         free(current->name);
-        if (S_ISLINIK((current)->st_mode))
+        if (S_ISLNK((current)->st_mode))
         {
             free(current->link);
         }

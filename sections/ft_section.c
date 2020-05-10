@@ -6,7 +6,7 @@ void        ft_section(char *dir, t_flags flags)
     int         section;
     t_files     *temp;
 
-    block = 0;
+    section = 0;
     var.files = NULL;
     ft_sectionsetup(dir, flags, &var);
     temp = var.files;

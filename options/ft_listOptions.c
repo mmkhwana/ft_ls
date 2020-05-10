@@ -27,7 +27,7 @@ t_files         *ft_listOptions(char *path, char *name, t_flags flags)
     var.alist->st_ino = var.fstat.st_ino;
     var.alist->st_blocks = var.fstat.st_blocks;
     var.alist->name = ft_strdup(name);
-    if (S_ISLINK((var.alist)->st_mode))
+    if (S_ISLNK((var.alist)->st_mode))
     {
         ft_linkpath(var.alist, var.newpath, flags);
     }
