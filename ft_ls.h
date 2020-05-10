@@ -17,7 +17,6 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <pwd.h>
-#include <uuid/uuid.h>
 #include <grp.h>
 #include <uuid/uuid.h>
 #include <time.h>
@@ -32,16 +31,10 @@ typedef	struct	s_flags
 	int		g;
 	int		u;
 	int		f;
-	int		sm_r;
-	int		lg_r;
+	int		rr;
+	int		RR;
 }			t_flags;
 
-typedef struct 		s_dir
-{
-	DIR 			*dire;
-	t_files			*files;
-	struct dirent	*diropt;
-}					t_dir;
 
 typedef struct		s_files
 {
@@ -62,6 +55,12 @@ typedef struct		s_files
 	ino_t			st_ino;
 	blkcnt_t		st_blocks;
 }					t_files;
+typedef struct 		s_dir
+{
+	DIR 			*dire;
+	t_files			*files;
+	struct dirent	*diropt;
+}					t_dir;
 
 typedef struct		s_lists
 {
