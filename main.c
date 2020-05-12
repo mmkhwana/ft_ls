@@ -2,29 +2,29 @@
 
 int             main(int ac, char **av)
 {
-    t_main      main;
+    t_main      major;
     t_files     *files;
     t_begin     begin;
 
-    main.pwd = ft_strdup(".");
-    ft_defineflags(&main.flags);
+    major.pwd = ft_strdup(".");
+    ft_defineflags(&major.flags);
     if (ac > 1)
     {
-        begin = ft_flag(av, &main.flags);
+        begin = ft_flag(av, &major.flags);
     }
-    main.start = begin.begin;
+    major.start = begin.begin;
     if (begin.selected != 0)
     {
-        ft_option(av, main);
+        ft_option(av, major);
     }
     else
     {
-        if (!(files = ft_arrange(".", main.flags)))
+        if (!(files = ft_arange(".", major.flags)))
         {
             ft_putstr("\0");
             exit(1);
         }
-        if (main.flags.RR)
+        if (major.flags.RR)
         {
             ft_free(files);
         }

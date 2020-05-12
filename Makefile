@@ -29,20 +29,20 @@ SOURCE =	change/ft_node.c change/ft_node.c \
 			time/ft_timesorted.c time/ft_timeaccessed.c \
 			verify/ft_directory.c verify/ft_check.c verify/ft_linkpath.c
 
-OBJECTS =	change/ft_node.o change/ft_node.o \
-			config/ft_config_arange.o config/ft_arange_sec.o config/ft_arange_first.o config/ft_arange.o \
-			display/ft_perminfo.o display/ft_timeperm.o display/ft_display.o \
-			flags/ft_defineflags.o flags/ft_flagfault.o flags/ft_flagparam.o flags/ft_flagtype.o flags/ft_flag.o \
-			free/ft_freelist.o free/ft_freelistprv.o free/ft_free.o \
-			order/ft_orderedinsert.o order/ft_insertionorder.o \
-			lists/ft_list.o lists/ft_filllist.o lists/ft_newlist.o lists/ft_reverse.o \
-			options/ft_listOptions.o options/ft_optionsA.o options/ft_optionB.o options/ft_optionsSetup.o options/ft_option.o \
-			path/ft_makepath.o \
-			printperm/ft_permission.o printperm/ft_memberperm.o printperm/ft_diffperm.o printperm/ft_printperm.o \
-			sections/ft_sectionsetup.o sections/ft_displaysection.o sections/ft_section.o \
-			sorttime/ft_sort_time_insert.o sorttime/ft_sort_time_inserted.o \
-			time/ft_timesorted.o time/ft_timeaccessed.o \
-			verify/ft_directory.o verify/ft_check.o verify/ft_linkpath.o
+OBJECTS =	ft_node.o ft_node.o \
+			ft_config_arange.o ft_arange_sec.o ft_arange_first.o ft_arange.o \
+			ft_perminfo.o ft_timeperm.o ft_display.o \
+			ft_defineflags.o ft_flagfault.o ft_flagparam.o ft_flagtype.o ft_flag.o \
+			ft_freelist.o ft_freelistprv.o ft_free.o \
+			ft_orderedinsert.o ft_insertionorder.o \
+			ft_list.o ft_filllist.o ft_newlist.o ft_reverse.o \
+			ft_listOptions.o ft_optionsA.o ft_optionB.o ft_optionsSetup.o ft_option.o \
+			ft_makepath.o \
+			ft_permission.o ft_memberperm.o ft_diffperm.o ft_printperm.o \
+			ft_sectionsetup.o ft_displaysection.o ft_section.o \
+			ft_sort_time_insert.o ft_sort_time_inserted.o \
+			ft_timesorted.o ft_timeaccessed.o \
+			ft_directory.o ft_check.o ft_linkpath.o
  
 FLAGS = -Wall -Werror -Wextra
 

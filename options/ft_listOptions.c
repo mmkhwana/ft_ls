@@ -12,6 +12,7 @@ t_files         *ft_listOptions(char *path, char *name, t_flags flags)
     free(var.newpath);
     if (!(var.alist = (t_files *)malloc(sizeof(t_files))))
     {
+        ft_putendl("LISTOPTION");
         return (NULL);
     }
     var.alist->next = NULL;

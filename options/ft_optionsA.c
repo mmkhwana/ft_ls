@@ -13,8 +13,9 @@ void            ft_optionsA(t_files *temp, char *pwd, t_flags flags)
         ft_putstr(": No such file or directory");
         ft_putchar(10);
     }
-    if (!S_ISDIR(temp->st_mode))
+    if (S_ISDIR(temp->st_mode))
     {
+        ft_putendl("OptionA");
         ft_display(temp, flags);
     }
     free(newpath);

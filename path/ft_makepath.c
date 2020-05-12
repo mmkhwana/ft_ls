@@ -20,10 +20,12 @@ char        *ft_makepath(char *dir, char *file)
     }
     else
     {
+
         new_path = ft_strcpy(new_path, dir);
         new_path = ft_strcat(new_path, "/");
-        new_path = ft_strcat(new_path, file);
+        if (file[0] != '-')
+            new_path = ft_strcat(new_path, file);
     }
-    return(new_path);
+    return (new_path);
     ft_strdel(&new_path);   
 }

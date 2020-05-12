@@ -9,6 +9,7 @@ void            ft_optionB(t_files *temp, char *pwd, t_flags flags)
     newpath = ft_makepath(pwd, temp->name);
     if (lstat(newpath, &fstat) < 0)
     {
+        
         ft_putstr("ls: ");
         ft_putstr(temp->name);
         ft_putstr(": No such file or directory");
@@ -16,6 +17,7 @@ void            ft_optionB(t_files *temp, char *pwd, t_flags flags)
     }
     else
     {
+        ft_putendl("OPTIONB");
         if (S_ISDIR(temp->st_mode))
         {
             ft_putchar('\n');
