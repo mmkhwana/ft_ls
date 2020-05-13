@@ -16,7 +16,6 @@ void        ft_list(t_files **b, struct dirent *dir, char *path, t_flags flags)
             list = list->next;
         }
         list->next = ft_newlist(dir, path, flags);
-        list->next->prev = list;
-        
+        list->next->prev = list;    
     }
 }

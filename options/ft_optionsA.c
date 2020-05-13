@@ -18,5 +18,5 @@ void            ft_optionsA(t_files *temp, char *pwd, t_flags flags)
         ft_putendl("OptionA");
         ft_display(temp, flags);
     }
-    free(newpath);
+    //free(newpath);
 }

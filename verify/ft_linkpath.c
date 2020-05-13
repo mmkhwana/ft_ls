@@ -11,7 +11,7 @@ void        ft_linkpath(t_files *file, char *path, t_flags flags)
     link_size = 0;
     link_size = readlink(path, buff, sizeof(buff));
     buff[link_size] = '\0';
-    if(flags.l == 1)
+    if(flags.l == 3)
     {
         i = ft_strlen("->") + ft_strlen(buff);
         if (!(link = (char *)malloc(sizeof(char) * i + 1)))

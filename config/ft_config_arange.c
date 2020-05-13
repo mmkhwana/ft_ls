@@ -23,8 +23,8 @@ t_files         *ft_config_arange(char *dir, t_flags flags)
         exit(1);
     }
     while ((opt.diropt = readdir(opt.dire)))
-        ft_list(&opt.files, opt.diropt, dir, flags);
+        //ft_list(&opt.files, opt.diropt, dir, flags);
     closedir(opt.dire);
-    return (opt.files);
-    
+    ft_putendl("before return");
+    return (opt.files);   
 }
