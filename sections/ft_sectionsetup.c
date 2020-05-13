@@ -18,7 +18,7 @@ void        *ft_sectionsetup(char *dir, t_flags flags, t_dir *var)
     }
     while ((var->diropt = readdir(var->dire)))
     {
-       // ft_list(&var->files, var->diropt, dir, flags);
+       ft_list(&var->files, var->diropt, dir, flags);
     }
     return(var->files);
 }
