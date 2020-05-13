@@ -5,7 +5,7 @@ t_files         *ft_arange(char *dir, t_flags flags)
     t_lists     list;
     t_files     *temp;
 
-    if (flags.l == 1)
+    if (flags.l == 2)
     {
         ft_section(dir, flags);
     }
