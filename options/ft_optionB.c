@@ -20,11 +20,10 @@ void            ft_optionB(t_files *temp, char *pwd, t_flags flags)
         
         if (S_ISDIR(temp->st_mode))
         {
-            ft_putchar('\n');
-            ft_putendl(newpath);
+            // ft_putchar('\n');
+            // ft_putendl(newpath);
             file = ft_arange(newpath, flags);
-            ft_free(file);
-            ft_putendl("OPTIONB");
+            free(file);
         }
     }
    // free(newpath);   

@@ -15,8 +15,8 @@ void            ft_optionsA(t_files *temp, char *pwd, t_flags flags)
     }
     if (S_ISDIR(temp->st_mode))
     {
-        ft_putendl("OptionA");
-        ft_display(temp, flags);
+        if (!(flags.l == 2 ))
+            ft_display(temp, flags);
     }
     //free(newpath);
 }
