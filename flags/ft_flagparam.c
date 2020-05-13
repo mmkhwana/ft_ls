@@ -5,6 +5,7 @@ void        ft_flagparam(char *flags, t_flags *flg, int i)
     if (flags[i] == 'a')
     {
         flg->a = 1;
+        flg->l = 0;
     }
     else if (flags[i] == 'f')
     {
@@ -12,8 +13,8 @@ void        ft_flagparam(char *flags, t_flags *flg, int i)
     }
     else if (flags[i] == 'l')
     {
-        flg->l = 1;
-        //flg->a = 1;
+        flg->l = 2;
+        flg->a = 1;
     }
     else if (flags[i] == 'R')
     {

@@ -2,7 +2,7 @@
 
 void        ft_displaysection(int section, t_flags flags)
 {
-    if (flags.l == 1)
+    if (flags.l == 2)
     {
         ft_putstr("total ");
         ft_putnbr(section);
