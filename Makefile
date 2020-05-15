@@ -11,6 +11,8 @@
 # **************************************************************************** #
 
 NAME = ft_ls.a
+EXE = ft_ls
+MAIN = main.c
 
 CC = gcc
 
@@ -66,4 +68,5 @@ fclean : clean
 	rm -rf .*.swp libft/.*.swp
 
 c:
-	$(CC) $(FLAGS) main.c $(NAME)
+	$(CC) $(FLAG) -o $(EXE) $(MAIN) $(NAME)
+	#$(CC) $(FLAGS) main.c $(NAME)

@@ -1,32 +1,7 @@
 #include "../ft_ls.h"
 
 void            ft_display(t_files *tmp, t_flags flag)
-{
-//     if (!flag.a)
-//     {
-//         if  (tmp->name[0] != '.')
-//          {
-//                 if (flag.l == 1)
-//                 {   
-//                     ft_printperm(tmp->d_stat);
-//                     ft_perminfo(tmp->d_stat, flag);
-//                     ft_timeperm(tmp->d_stat,flag); 
-//                     ft_putendl(tmp->name);
-//                 }
-//         }
-//     }
-//     else
-//     {
-        
-//         if (flag.l == 1)
-//         {
-//             ft_printperm(tmp->d_stat);
-//             ft_perminfo(tmp->d_stat, flag);
-//             ft_timeperm(tmp->d_stat,flag);
-//         }
-//    }
-
-    
+{    
     if (flag.l == 2 )
     {
         if (!(tmp->name[0] == '.'))
@@ -59,6 +34,5 @@ void            ft_display(t_files *tmp, t_flags flag)
     {
         if (!(tmp->name[0] == '.'))
             ft_putendl(tmp->name);
-    }
-      
+    }     
 }

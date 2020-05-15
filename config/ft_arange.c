@@ -17,8 +17,13 @@ t_files         *ft_arange(char *dir, t_flags flags)
     temp = list.temp;
     while (temp->next)
     {
-        if (ft_strchr(temp->name, '.'))
+        if (ft_strchr(temp->name, '.') && flags.RR == 1)
             ft_display(temp, flags);
+        else
+        {
+            ft_display(temp, flags);
+        }
+        
         if (flags.RR == 1)
         {
             ft_arange_sec(temp, dir, flags);
