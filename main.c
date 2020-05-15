@@ -24,13 +24,9 @@ int             main(int ac, char **av)
             ft_putstr("\0");
             exit(1);
         }
-        if (major.flags.RR)
-        {
-            ft_free(files);
-        }
         else
         {
-            ft_freelist(files);
+            ft_display(files, major.flags);
         }
     }
     return (0);

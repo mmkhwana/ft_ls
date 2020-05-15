@@ -28,27 +28,37 @@ void            ft_display(t_files *tmp, t_flags flag)
 
     
     if (flag.l == 2 )
-    {   
-        ft_printperm(tmp->d_stat);
-        ft_perminfo(tmp->d_stat, flag);
-        ft_timeperm(tmp->d_stat,flag); 
-        ft_putendl(tmp->name);
+    {
+        if (!(tmp->name[0] == '.'))
+        {
+            ft_printperm(tmp->d_stat);
+            ft_perminfo(tmp->d_stat, flag);
+            ft_timeperm(tmp->d_stat,flag); 
+            ft_putendl(tmp->name);
+        }
         return ;
     }
-    if (flag.a == 1)
+    else if (flag.a == 1)
     {
         ft_putendl(tmp->name);
     }
-    if (flag.t == 1)
+    else if (flag.t == 1)
     {
         ft_putendl(tmp->name);
     }
-    if (flag.rr == 1)
+    else if (flag.rr == 1)
     {
         ft_putendl(tmp->name);
     }
-    if (flag.RR == 1)
+    else if (flag.RR == 1)
     {
-        ft_putendl(tmp->name);
-    }  
+        if (!(tmp->name[0] == '.'))
+            ft_putendl(tmp->name);
+    }
+    else
+    {
+        if (!(tmp->name[0] == '.'))
+            ft_putendl(tmp->name);
+    }
+      
 }
