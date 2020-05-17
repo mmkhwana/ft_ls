@@ -19,11 +19,13 @@ void            ft_display(t_files *tmp, t_flags flag)
     }
     else if (flag.t == 1)
     {
-        ft_putendl(tmp->name);
+        if (!(tmp->name[0] == '.'))   
+            ft_putendl(tmp->name);
     }
     else if (flag.rr == 1)
     {
-        ft_putendl(tmp->name);
+        if (!(tmp->name[0] == '.'))   
+            ft_putendl(tmp->name);
     }
     else if (flag.RR == 1)
     {

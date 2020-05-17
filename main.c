@@ -24,10 +24,6 @@ int             main(int ac, char **av)
             ft_putstr("\0");
             exit(1);
         }
-        else
-        {
-            ft_display(files, major.flags);
-        }
     }
     return (0);
 }

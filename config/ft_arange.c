@@ -15,22 +15,31 @@ t_files         *ft_arange(char *dir, t_flags flags)
         return (NULL);
     }
     temp = list.temp;
-    while (temp->next)
+    if (!flags.RR)
     {
-        if (ft_strchr(temp->name, '.') && flags.RR == 1)
-            ft_display(temp, flags);
-        else
+        while (temp->next)
         {
             ft_display(temp, flags);
+            temp = temp->next;
         }
-        
-        if (flags.RR == 1)
-        {
-            ft_arange_sec(temp, dir, flags);
-        }
-        temp = temp->next;
     }
-    
+    else
+    {
+        while (temp->next)
+        {
+            if (ft_strchr(temp->name, '.') && flags.RR == 1)
+                ft_display(temp, flags);
+            if (flags.RR == 1)
+            {
+                ft_arange_sec(temp, dir, flags);
+            }
+            temp = temp->next;
+        }
+            if (flags.RR == 1)
+            {
+                ft_arange_sec(temp, dir, flags);
+            }
+    }
     ft_display(temp, flags);
     return(list.files);
 }
