@@ -35,10 +35,10 @@ t_files         *ft_arange(char *dir, t_flags flags)
             }
             temp = temp->next;
         }
-            if (flags.RR == 1)
-            {
-                ft_arange_sec(temp, dir, flags);
-            }
+        if (flags.RR == 1)
+        {
+            ft_arange_sec(temp, dir, flags);
+        }
     }
     ft_display(temp, flags);
     return(list.files);

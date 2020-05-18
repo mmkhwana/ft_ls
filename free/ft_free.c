@@ -17,12 +17,12 @@ void        ft_free(t_files *files)
                     ft_free(files->sub_dir);
                 }
         }
-        files = files->next;
+        current = current->next;
         free(current->name);
         if (S_ISLNK((current)->st_mode))
         {
             free(current->link);
-        }
+        } 
         free(current);
-    }    
+    }
 }

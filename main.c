@@ -25,5 +25,6 @@ int             main(int ac, char **av)
             exit(1);
         }
     }
+    ft_free(files);
     return (0);
 }
