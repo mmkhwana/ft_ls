@@ -25,6 +25,6 @@ int             main(int ac, char **av)
             exit(1);
         }
     }
-    ft_free(files);
+    free(major.pwd);
     return (0);
 }
